@@ -153,14 +153,36 @@
       margin: 0;
     }
 
-    /* ── FOOTER ── */
-    footer {
-      padding-top: 44px;
-      font-size: 0.78rem;
+    /* ── SUB-ARTICLES ── */
+    .sub-list {
+      list-style: none;
+      margin-top: 14px;
+      padding-left: 14px;
+      border-left: 1px solid var(--rule);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .sub-list a {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 0.88rem;
       color: var(--ink-muted);
-      opacity: 0.55;
-      text-align: center;
-      letter-spacing: 0.04em;
+      text-decoration: none;
+      padding-bottom: 1px;
+      border-bottom: 1px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .sub-list a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    .sub-list a::before {
+      content: '↳ ';
+      font-style: normal;
+      opacity: 0.45;
     }
 
     /* ── RESPONSIVE ── */
@@ -204,7 +226,6 @@
           <a href="mailto:arian.ebrahim@gmail.com">Email</a>
           <a href="https://github.com/ebiarian" target="_blank" rel="noopener">GitHub</a>
           <a href="https://linkedin.com/in/ebrahim-arian-46399b108/" target="_blank" rel="noopener">LinkedIn</a>
-          <!-- Update the href below with your actual Medium profile URL -->
           <a href="https://medium.com/@arian.ebrahim" target="_blank" rel="noopener">Medium</a>
         </nav>
       </div>
@@ -237,6 +258,10 @@
           Image–Description Alignment in E-Commerce
         </a>
         <p class="work-sub">Detecting mismatches between product images and descriptions in online marketplaces using CLIP and vision-language models.</p>
+        <ul class="sub-list">
+          <li><a href="https://github.com/ebiarian/product-image-description-alignment/blob/main/docs/article_part1.md" target="_blank" rel="noopener">Part One: Using CLIP and BLIP to Catch Product Description Mismatches</a></li>
+          <li><a href="https://github.com/ebiarian/product-image-description-alignment/blob/main/docs/article_part2.md" target="_blank" rel="noopener">Part Two: Catching What CLIP and BLIP Missed with OCR and VQA"</a></li>
+        </ul>
       </li>
     </ul>
   </section>
@@ -252,8 +277,6 @@
       </li>
     </ul>
   </section>
-
-
 
 </body>
 </html>
